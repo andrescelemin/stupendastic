@@ -1,123 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stupendastic | Vídeo Marketing para Construcción y Arquitectura</title>
-  <meta name="description" content="Productora audiovisual especializada en vídeo marketing para construcción, real estate y estudios de arquitectura. Gestiona tus proyectos con nuestra plataforma Connect." />
-  <link rel="canonical" href="https://andrescelemin.github.io/stupendastic/" />
-  <!-- Hoja de estilos unificada -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stupendastic Films | Vídeo Marketing para Arquitectura, Construcción y Real Estate</title>
+  <meta name="description" content="Productora audiovisual especialista en vídeo marketing de arquitectura, construcción y real-estate. Seguimiento de obra 4K, drones legales en ciudad y plataforma Connect en tiempo real.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#1e3a8a;
+      --primary-dark:#172554;
+      --accent:#f97316;
+      --gray:#6b7280;
+      --light:#f9fafb;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;line-height:1.55;color:#333;scroll-behavior:smooth;}
+    a{color:inherit;text-decoration:none;}
 
+    /* Utilities */
+    .container{padding:4rem 1.25rem;max-width:960px;margin:0 auto;}
+    .text-center{text-align:center;}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:1rem 2.5rem;font-size:1.125rem;font-weight:600;border:none;border-radius:0.5rem;cursor:pointer;box-shadow:0 6px 15px rgba(0,0,0,.2);transition:transform .2s,opacity .2s;}
+    .btn:hover{transform:translateY(-3px);opacity:.9;}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--primary),#0f172a);color:#fff;padding:6rem 1.25rem 5rem;text-align:center;}
+    .hero h1{font-size:2.6rem;font-weight:700;margin-bottom:1rem;max-width:820px;margin-inline:auto;}
+    .hero p{font-size:1.25rem;margin-bottom:2.2rem;max-width:740px;margin-inline:auto;}
+    .badges{display:flex;justify-content:center;gap:1.25rem;margin-top:2rem;flex-wrap:wrap;}
+    .badges img{height:40px;filter:brightness(0) invert(1);opacity:.9;}
+
+    /* Grid & bullets */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2.75rem;align-items:center;}
+    @media(max-width:768px){.grid-2{grid-template-columns:1fr;}}
+    .bullets{list-style:none;}
+    .bullets li{position:relative;padding-left:2.1rem;margin-bottom:0.9rem;font-size:1.05rem;line-height:1.5;}
+    .bullets li::before{content:'✔';position:absolute;left:0;top:0;color:var(--accent);font-weight:700;}
+
+    .video-wrapper{position:relative;padding-top:56.25%;width:100%;background:#000;border-radius:0.75rem;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.15);}
+    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+    /* Sections */
+    .bg-light{background:var(--light);}
+    .bg-gray{background:#f3f4f6;}
+
+    /* FAQ */
+    details{border:1px solid #e5e7eb;border-radius:.5rem;margin-bottom:.75rem;padding:1rem;background:#fff;}
+    summary{cursor:pointer;font-weight:600;}
+
+    /* Contact Form */
+    #contacto{background:var(--light);}
+    form{display:grid;gap:1rem;max-width:600px;margin:1.5rem auto;}
+    form label{display:flex;flex-direction:column;font-weight:600;color:#4b5563;text-align:left;}
+    form input,form textarea{padding:.6rem;border:1px solid #d1d5db;border-radius:.375rem;font-family:inherit;font-size:1rem;}
+
+    /* Footer */
+    .footer{background:#111827;color:#9ca3af;text-align:center;font-size:.875rem;padding:3rem 1.25rem;}
+  </style>
+</head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header>
-    <img
-      class="logo-header"
-      src="assets/logo-stupendastic.webp"
-      alt="Logo Stupendastic"
-      loading="lazy"
-      width="200" height="200"
-    />
-    <h1>Stupendastic</h1>
-    <p>Impulsa tus proyectos de construcción y arquitectura con vídeo marketing profesional</p>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p style="font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;">Cada estructura cuenta una historia</p>
+    <h1>Transformamos proyectos arquitectónicos y de construcción en <span style="color:var(--accent);">narrativas visuales irresistibles</span></h1>
+    <p>Capta inversores, acelera ventas y supervisa tu obra en tiempo real con vídeos 4K, tomas aéreas legales en ciudad y la plataforma <strong>Connect</strong>.</p>
+    <a href="#contacto" class="btn">Solicita tu demo personalizada</a>
+
+    <div class="badges">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/SSL-logo.svg" alt="Conexión SSL">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Visa_2021.svg" alt="Visa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/PCI_DSS_logo.svg" alt="PCI Compliance">
+    </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <div class="hero">
-    <img
-      class="hero-img"
-      src="assets/stupendastic-hero.webp"
-      alt="Vídeo marketing para arquitectura"
-      loading="lazy"
-      width="1920" height="1080"
-    />
-  </div>
+  <!-- PROBLEMA → SOLUCIÓN -->
+  <section class="container">
+    <div class="grid-2">
+      <ul class="bullets">
+        <li><strong>Connect en tiempo real:</strong> más de 120 obras documentadas el último año con streaming 4K y timelapse inteligente.</li>
+        <li><strong>Todas las licencias al día:</strong> drones certificados para volar en ciudad y campo, sin dolores de cabeza legales.</li>
+        <li><strong>Equipo híbrido:</strong> filmmakers + arquitectos que hablan tu lenguaje técnico y entienden el ROI de cada metro cuadrado.</li>
+        <li><strong>Cero-stress:</strong> gestión 360º — permisos, rodaje y edición; tú solo disfrutas del resultado.</li>
+      </ul>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/cb1Y4vPj3jM" title="Showreel Stupendastic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-  <div class="container">
-    <!-- ===== QUIÉNES SOMOS ===== -->
-    <section>
-      <h2>💡 ¿Quiénes somos?</h2>
-      <p>
-        Somos una productora audiovisual especializada en vídeo marketing para construcción,
-        real estate y estudios de arquitectura.
-        Transformamos la manera en que presentas tus proyectos con una narrativa
-        visual que impacta.
-      </p>
-    </section>
+  <!-- PORTFOLIO HOOK -->
+  <section class="container text-center bg-light">
+    <h2 style="font-size:2rem;margin-bottom:1rem;">Destaca por tu Portfolio</h2>
+    <p style="font-size:1.125rem;color:var(--gray);max-width:760px;margin:0 auto 1.5rem;">Un vídeo detallado convierte planos y renders en una experiencia emocional que vende tu proyecto antes de la primera piedra.</p>
+    <a href="#contacto" class="btn">Mira ejemplos reales</a>
+  </section>
 
-    <!-- ===== PLATAFORMA CONNECT ===== -->
-    <section>
-      <h2>🛠 Plataforma Connect</h2>
-      <p>
-        Descubre <strong>Connect</strong>, la herramienta digital intuitiva que gestiona
-        todos los contenidos audiovisuales de tu obra.
-        Una solución híbrida: software con inteligencia artificial y hardware con
-        inteligencia humana. Supervisa tu proyecto en tiempo real y descarga vídeos
-        periódicos que documentan el avance de tu construcción.
-      </p>
-    </section>
+  <!-- VÍDEOS PARA ARQUITECTURA -->
+  <section class="container">
+    <h2 style="color:var(--primary);font-size:1.9rem;margin-bottom:1.5rem;">Vídeos para Arquitectura &amp; Urbanismo</h2>
+    <p style="max-width:780px;font-size:1.05rem;margin-bottom:1.25rem;">Cada obra requiere un guion a medida. Combinamos <strong>timelapse extendido</strong>, <strong>macro-detalles de texturas</strong> y <strong>tomas aéreas 6K</strong> para narrar la esencia de tu espacio.</p>
+    <ul class="bullets">
+      <li>Estrategia creativa personalizada según tipología (residencial, corporativa, infraestructuras).</li>
+      <li>Edición cinematográfica con gráficos de datos (aforo, eficiencia energética, ROI del proyecto).</li>
+      <li>Entrega multiformato optimizada para marketing inmobiliario, redes sociales y licitaciones.</li>
+    </ul>
+  </section>
 
-    <!-- ===== PRESENCIA NACIONAL ===== -->
-    <section>
-      <h2>📍 Presencia nacional</h2>
-      <p>
-        Desde Barcelona al resto de la península.
-        Con oficinas en Barcelona, Madrid y presencia en el norte y sur de España,
-        ofrecemos servicios de vídeo marketing en todo el territorio nacional.
-        Gracias a Connect, sigues tu proyecto desde cualquier lugar y obtienes
-        contenido audiovisual personalizado con la frecuencia que necesites.
-      </p>
-    </section>
+  <!-- DRONES PARA ARQUITECTURA -->
+  <section class="container bg-light">
+    <h2 style="color:var(--primary);font-size:1.9rem;margin-bottom:1.5rem;">Drones certificados en ciudad</h2>
+    <p style="max-width:780px;font-size:1.05rem;margin-bottom:1.25rem;">Muestra la integración urbana de tu proyecto con planos imposibles de lograr desde tierra.</p>
+    <ul class="bullets">
+      <li>Operamos bajo normativa AESA/EASA: vuelos seguros y 100 % legales.</li>
+      <li>Rutas de vuelo y altura optimizadas para resaltar decisiones urbanísticas y constructivas.</li>
+    </ul>
+  </section>
 
-    <!-- ===== EXPERIENCIA ===== -->
-    <section>
-      <h2>📽 Experiencia que da confianza</h2>
-      <p>
-        Con casi diez años de experiencia, seguimos fieles a nuestra misión:
-        crear soluciones audiovisuales simples, efectivas y adaptadas
-        a un sector que exige precisión técnica y especialización.
-      </p>
-    </section>
+  <!-- CASOS DE ÉXITO -->
+  <section class="container text-center">
+    <h2 style="font-size:2rem;margin-bottom:.5rem;">Casos de Éxito</h2>
+    <p style="color:var(--gray);margin-bottom:2rem;">Más de <strong>8,5 millones</strong> de visualizaciones generadas y un <strong>25 % de aceleración</strong> en preventa.</p>
+    <div class="grid-2" style="gap:1.5rem;">
+      <div style="background:#fff;padding:1.5rem;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05);">
+        <h3 style="color:var(--accent);margin-bottom:.5rem;font-size:1.2rem;">Torre Skyline</h3>
+        <p style="font-size:.95rem;color:var(--gray);">+1 M de reproducciones en redes sociales y preventa del 60 % de unidades en 3 meses.</p>
+      </div>
+      <div style="background:#fff;padding:1.5rem;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05);">
+        <h3 style="color:var(--accent);margin-bottom:.5rem;font-size:1.2rem;">Campus GreenTech</h3>
+        <p style="font-size:.95rem;color:var(--gray);">Vídeo timelapse de 18 meses que atrajo inversión Series B de 14 M €.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- ===== CTA PRINCIPAL ===== -->
-    <section class="cta">
-      <h2>🎯 ¿Prefieres hablar con una persona?</h2>
-      <p>¿Una charla directa y sin rodeos? Llámanos. Hablamos tu idioma y el del sector.</p>
-      <a class="btn-primary" href="tel:+34690121887">📞 +34 690 12 18 87</a>
-    </section>
+  <!-- EQUIPO -->
+  <section class="container bg-light">
+    <h2 class="text-center" style="font-size:1.9rem;margin-bottom:1rem;">Tu Equipo de 15+ Especialistas</h2>
+    <p style="font-size:1.05rem;max-width:820px;margin:0 auto 1.5rem;text-align:center;">Filmmakers, arquitectos, pilotos de dron y motion graphers unidos para que cada ángulo, luz y textura transmita el valor de tu obra.</p>
+  </section>
 
-    <!-- ===== FORMULARIO DE CONTACTO ===== -->
-    <section class="form">
-      <h2>📩 Solicita más información</h2>
-      <form action="https://formspree.io/f/mwpbdjqk" method="POST">
-        <label>Nombre completo
-          <input type="text" name="name" required>
-        </label>
-        <label>Teléfono
-          <input type="tel" name="phone" required>
-        </label>
-        <label>Correo electrónico
-          <input type="email" name="email" required>
-        </label>
-        <label>¿Qué tipo de proyecto quieres documentar?
-          <input type="text" name="proyecto" required>
-        </label>
-        <button type="submit" class="btn-primary">Solicitar contacto</button>
-      </form>
-    </section>
-  </div>
+  <!-- FAQ -->
+  <section class="container" id="faq">
+    <h2 style="font-size:1.9rem;margin-bottom:1rem;">Preguntas Frecuentes</h2>
+    <details>
+      <summary>¿Es legal volar drones en zonas urbanas de España?</summary>
+      <p>Sí. Contamos con operador certificado por AESA y gestionamos los permisos municipales y de espacio aéreo para que tu grabación sea 100 % legal y segura.</p>
+    </details>
+    <details>
+      <summary>¿Cómo funciona la plataforma Connect?</summary>
+      <p>Instalamos cámaras 4K con conexión LTE en obra. Accede a streaming en directo, genera timelapses automáticos y descarga clips para tus redes.</p>
+    </details>
+    <details>
+      <summary>¿Cuál es el plazo medio de entrega de un vídeo?</summary>
+      <p>Entre 7 y 21 días, según complejidad. Los timelapse de larga duración se entregan por fases para mantener tu marketing siempre activo.</p>
+    </details>
+  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    Stupendastic – Vídeo marketing especializado para construcción y arquitectura<br>
-    Contacto: +34 690 12 18 87 · hola@stupendastic.com
+  <!-- CTA FINAL -->
+  <section class="container text-center bg-gray">
+    <h2 style="font-size:2rem;margin-bottom:1rem;">¿Listo para ver tu obra en acción?</h2>
+    <p style="font-size:1.125rem;margin-bottom:2rem;color:var(--gray);">Solicita ahora una demo personalizada y descubre cómo Stupendastic puede elevar tu próxima construcción.</p>
+    <a href="#contacto" class="btn">Quiero mi demo ahora</a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="container text-center">
+    <h2 style="font-size:1.9rem;margin-bottom:.75rem;">🎬 Solicita tu Demo Gratis</h2>
+    <p style="font-size:1.05rem;color:var(--gray);max-width:760px;margin:0 auto 1.5rem;">
+      Beneficios al reservar: <strong>Consultoría audiovisual 1-a-1 sin costo</strong> + <strong>Demo en vivo de la plataforma Connect</strong>.
+    </p>
+
+    <form action="https://formspree.io/f/mwpbdjqk" method="POST">
+      <label>Nombre completo
+        <input type="text" name="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+      <label>Número de WhatsApp
+        <input type="tel" name="phone" pattern="\\d{9,15}" required>
+      </label>
+      <label>Mensaje (opcional)
+        <textarea name="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto…"></textarea>
+      </label>
+      <button type="submit" class="btn">Solicitar demo</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Carrer Pamplona 88, 4-1 · 08018 Barcelona · +34 690 12 18 87 · info@stupendastic.com</p>
+    <p>© <span id="year"></span> Stupendastic Films. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
-  <a class="whatsapp-float" href="https://wa.me/34690121887" target="_blank" aria-label="WhatsApp">
-    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
-  </a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
