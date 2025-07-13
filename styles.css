@@ -1,9 +1,5 @@
 /* === Stupendastic Films – Landing Page Styles === */
-/*  Guarda este archivo como style.css y enlázalo en tu <head>
-    <link rel="stylesheet" href="style.css">                                            */
-
 :root{
-  /* Brand palette */
   --primary:#1e3a8a;
   --primary-dark:#172554;
   --accent:#f97316;
@@ -182,6 +178,7 @@ form textarea{
   right:20px;
   bottom:20px;
   z-index:999;
+  pointer-events:auto;
 }
 .whatsapp-float img{
   width:56px;
