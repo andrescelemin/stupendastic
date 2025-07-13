@@ -180,13 +180,13 @@ form textarea{
   z-index:999;
   pointer-events:auto;
 }
-.whatsapp-float img{
+.whatsapp-float svg{
   width:56px;
   height:56px;
   border-radius:50%;
   box-shadow:0 4px 10px rgba(0,0,0,.25);
   transition:transform .2s;
 }
-.whatsapp-float:hover img{
+.whatsapp-float:hover svg{
   transform:scale(1.05);
 }
