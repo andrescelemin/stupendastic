@@ -54,6 +54,21 @@
 
     /* Footer */
     .footer{background:#111827;color:#9ca3af;text-align:center;font-size:.875rem;padding:3rem 1.25rem}
+
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: none;
+    }
+    .whatsapp-float img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -169,7 +184,7 @@
         <input type="email" name="email" required />
       </label>
       <label>Número de WhatsApp
-        <input type="tel" name="phone" pattern="\\d{9,15}" required />
+        <input type="tel" name="phone" pattern="\d{9,15}" required />
       </label>
       <label>Mensaje (opcional)
         <textarea name="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto…"></textarea>
@@ -184,12 +199,12 @@
     <p>© <span id="year"></span> Stupendastic Films. Todos los derechos reservados.</p>
   </footer>
 
-   <!-- Botón flotante WhatsApp -->
+  <!-- Botón flotante WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
     <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
   </a>
 
-  <!-- Tiny JS -->
+  <!-- JS para año automático -->
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
